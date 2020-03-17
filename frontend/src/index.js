@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   // Render our root component and pass in the store as a prop
   const root = document.getElementById("root");
-  window.store = store;
-  window.composeTweet = composeTweet; 
+  // window.store = store;
+  // window.composeTweet = composeTweet; 
   ReactDOM.render(<Root store={store} />, root);
 });
