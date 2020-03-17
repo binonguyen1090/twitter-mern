@@ -1,9 +1,10 @@
 // src/components/tweets/tweet_compose.js
 
 import React from "react";
+
 import TweetBox from "./tweet_box";
 
-class TweetCompose extends React.Component {
+export default class TweetCompose extends React.Component {
   constructor(props) {
     super(props);
 
@@ -37,6 +38,7 @@ class TweetCompose extends React.Component {
   }
 
   render() {
+    // if (!text) return ""
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -57,4 +59,4 @@ class TweetCompose extends React.Component {
   }
 }
 
-export default TweetCompose;
+// export default TweetCompose;

@@ -40,7 +40,7 @@ app.use(bodyParser.urlencoded({
     extended: false
 }))
 app.use(bodyParser.json())
-
+debugger;
 app.use("/api/users", users);
 app.use("/api/tweets", tweets);
 

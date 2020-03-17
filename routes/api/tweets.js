@@ -6,6 +6,7 @@ const passport = require('passport');
 
 const validateTweetInput = require('../../validation/tweets');
 const Tweet = require('../../models/Tweet');
+debugger;
 
 router.get('/', (req, res) => {
   Tweet.find()
@@ -35,9 +36,9 @@ router.get('/:id', (req, res) => {
   
 router.post('/',
   passport.authenticate("jwt", { session: false }),
-
   (req, res) => {
     const { errors, isValid } = validateTweetInput(req.body);
+    debugger;
 
     if (!isValid) {
       return res.status(400).json(errors);
@@ -47,6 +48,7 @@ router.post('/',
       text: req.body.text,
       user: req.user.id
     });
+    debugger
 
     newTweet.save().then(tweet => res.json(tweet));
   }
